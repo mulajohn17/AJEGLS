@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="retrievegeneral" targetNamespace="http://tempuri.org/retrievegeneral.xsd" xmlns:mstns="http://tempuri.org/retrievegeneral.xsd" xmlns="http://tempuri.org/retrievegeneral.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="generaltblTableAdapter" GeneratorDataComponentClassName="generaltblTableAdapter" Name="generaltbl" UserDataComponentName="generaltblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillgeneralJournal" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatageneralJournal" GeneratorSourceName="FillgeneralJournal" GetMethodModifier="Public" GetMethodName="GetDatageneralJournal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDatageneralJournal" UserSourceName="FillgeneralJournal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        dbo.historytbl.datee, dbo.charttbl.chartname, dbo.historytbl.debit, dbo.historytbl.credit, dbo.historytbl.remarks, dbo.historytbl.journalcategory, dbo.customertbl.fullname,''
+FROM            dbo.historytbl INNER JOIN
+                         dbo.charttbl ON dbo.historytbl.chartId = dbo.charttbl.chartId INNER JOIN
+                         dbo.customertbl ON dbo.historytbl.customerId = dbo.customertbl.customerId
+
+UNION ALL
+SELECT        dbo.historytbl.datee, dbo.charttbl.chartname, dbo.historytbl.debit, dbo.historytbl.credit, dbo.historytbl.remarks, dbo.historytbl.journalcategory, dbo.suppliertbl.companyname,''
+FROM            dbo.historytbl INNER JOIN
+                         dbo.charttbl ON dbo.historytbl.chartId = dbo.charttbl.chartId INNER JOIN
+                         dbo.suppliertbl ON dbo.historytbl.supplierID = dbo.suppliertbl.supplierID
+UNION ALL
+
+SELECT        dbo.historytbl.datee, dbo.charttbl.chartname, dbo.historytbl.debit, dbo.historytbl.credit, dbo.historytbl.remarks, dbo.historytbl.journalcategory,'',''
+FROM            dbo.historytbl INNER JOIN
+                         dbo.charttbl ON dbo.historytbl.chartId = dbo.charttbl.chartId
+						 where dbo.historytbl.journalcategory = 'General Journal'
+order by dbo.historytbl.datee asc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="datee" DataSetColumn="datee" />
+              <Mapping SourceColumn="chartname" DataSetColumn="chartname" />
+              <Mapping SourceColumn="debit" DataSetColumn="debit" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+              <Mapping SourceColumn="journalcategory" DataSetColumn="journalcategory" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="Column1" DataSetColumn="Column1" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="retrievegeneral" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="retrievegeneral" msprop:Generator_UserDSName="retrievegeneral">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="generaltbl" msprop:Generator_TableClassName="generaltblDataTable" msprop:Generator_TableVarName="tablegeneraltbl" msprop:Generator_RowChangedName="generaltblRowChanged" msprop:Generator_TablePropName="generaltbl" msprop:Generator_RowDeletingName="generaltblRowDeleting" msprop:Generator_RowChangingName="generaltblRowChanging" msprop:Generator_RowEvHandlerName="generaltblRowChangeEventHandler" msprop:Generator_RowDeletedName="generaltblRowDeleted" msprop:Generator_RowClassName="generaltblRow" msprop:Generator_UserTableName="generaltbl" msprop:Generator_RowEvArgName="generaltblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="datee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndatee" msprop:Generator_ColumnPropNameInRow="datee" msprop:Generator_ColumnPropNameInTable="dateeColumn" msprop:Generator_UserColumnName="datee" type="xs:dateTime" minOccurs="0" />
+              <xs:element name="chartname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnchartname" msprop:Generator_ColumnPropNameInRow="chartname" msprop:Generator_ColumnPropNameInTable="chartnameColumn" msprop:Generator_UserColumnName="chartname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="debit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndebit" msprop:Generator_ColumnPropNameInRow="debit" msprop:Generator_ColumnPropNameInTable="debitColumn" msprop:Generator_UserColumnName="debit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="credit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="journalcategory" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnjournalcategory" msprop:Generator_ColumnPropNameInRow="journalcategory" msprop:Generator_ColumnPropNameInTable="journalcategoryColumn" msprop:Generator_UserColumnName="journalcategory" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fullname" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_UserColumnName="fullname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Column1" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnColumn1" msprop:Generator_ColumnPropNameInRow="Column1" msprop:Generator_ColumnPropNameInTable="Column1Column" msprop:Generator_UserColumnName="Column1" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="1" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

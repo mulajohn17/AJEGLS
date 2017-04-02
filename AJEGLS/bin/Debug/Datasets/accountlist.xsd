@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="accountlist" targetNamespace="http://tempuri.org/accountlist.xsd" xmlns:mstns="http://tempuri.org/accountlist.xsd" xmlns="http://tempuri.org/accountlist.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="accountlistTableAdapter" GeneratorDataComponentClassName="accountlistTableAdapter" Name="accountlist" UserDataComponentName="accountlistTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillChartAccount" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataChartAccount" GeneratorSourceName="FillChartAccount" GetMethodModifier="Public" GetMethodName="GetDataChartAccount" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataChartAccount" UserSourceName="FillChartAccount">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        charttbl.chartId, charttbl.chartname, chartstatustbl.chartstatus, charttypetbl.charttype
+FROM            charttbl INNER JOIN
+                         chartstatustbl ON charttbl.statusid = chartstatustbl.statusid INNER JOIN
+                         charttypetbl ON charttbl.typeid = charttypetbl.typeid
+ORDER BY charttbl.chartname </CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="chartId" DataSetColumn="chartId" />
+              <Mapping SourceColumn="chartname" DataSetColumn="chartname" />
+              <Mapping SourceColumn="chartstatus" DataSetColumn="chartstatus" />
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="accountlist" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="accountlist" msprop:Generator_UserDSName="accountlist">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="accountlist" msprop:Generator_TableClassName="accountlistDataTable" msprop:Generator_TableVarName="tableaccountlist" msprop:Generator_RowChangedName="accountlistRowChanged" msprop:Generator_TablePropName="_accountlist" msprop:Generator_RowDeletingName="accountlistRowDeleting" msprop:Generator_RowChangingName="accountlistRowChanging" msprop:Generator_RowEvHandlerName="accountlistRowChangeEventHandler" msprop:Generator_RowDeletedName="accountlistRowDeleted" msprop:Generator_RowClassName="accountlistRow" msprop:Generator_UserTableName="accountlist" msprop:Generator_RowEvArgName="accountlistRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="chartId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnchartId" msprop:Generator_ColumnPropNameInRow="chartId" msprop:Generator_ColumnPropNameInTable="chartIdColumn" msprop:Generator_UserColumnName="chartId" type="xs:int" />
+              <xs:element name="chartname" msprop:Generator_ColumnVarNameInTable="columnchartname" msprop:Generator_ColumnPropNameInRow="chartname" msprop:Generator_ColumnPropNameInTable="chartnameColumn" msprop:Generator_UserColumnName="chartname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="chartstatus" msprop:Generator_ColumnVarNameInTable="columnchartstatus" msprop:Generator_ColumnPropNameInRow="chartstatus" msprop:Generator_ColumnPropNameInTable="chartstatusColumn" msprop:Generator_UserColumnName="chartstatus">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:accountlist" />
+      <xs:field xpath="mstns:chartId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

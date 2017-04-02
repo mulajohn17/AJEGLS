@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="salesRetrieveData" targetNamespace="http://tempuri.org/salesRetrieveData.xsd" xmlns:mstns="http://tempuri.org/salesRetrieveData.xsd" xmlns="http://tempuri.org/salesRetrieveData.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="salesjournaltblTableAdapter" GeneratorDataComponentClassName="salesjournaltblTableAdapter" Name="salesjournaltbl" UserDataComponentName="salesjournaltblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fillsalesjournal" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatasalesjournal" GeneratorSourceName="Fillsalesjournal" GetMethodModifier="Public" GetMethodName="GetDatasalesjournal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDatasalesjournal" UserSourceName="Fillsalesjournal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        dbo.salesjournaltbl.datee as Date, dbo.charttbl.chartname as Particulars, dbo.salesjournaltbl.debit as Debit, dbo.salesjournaltbl.credit as Credit, dbo.salesjournaltbl.remarks, dbo.customertbl.fullname, dbo.salesjournaltbl.salesId, dbo.charttbl.charttype as AccountType
+FROM            dbo.salesjournaltbl INNER JOIN
+                         dbo.customertbl ON dbo.salesjournaltbl.customerId = dbo.customertbl.customerId INNER JOIN
+                         dbo.charttbl ON dbo.salesjournaltbl.chartId = dbo.charttbl.chartId
+					 order by dbo.salesjournaltbl.datee asc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="salesId" DataSetColumn="salesId" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Particulars" DataSetColumn="Particulars" />
+              <Mapping SourceColumn="Debit" DataSetColumn="Debit" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="AccountType" DataSetColumn="AccountType" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="salesRetrieveData" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="salesRetrieveData" msprop:Generator_UserDSName="salesRetrieveData">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="salesjournaltbl" msprop:Generator_TableClassName="salesjournaltblDataTable" msprop:Generator_TableVarName="tablesalesjournaltbl" msprop:Generator_RowChangedName="salesjournaltblRowChanged" msprop:Generator_TablePropName="salesjournaltbl" msprop:Generator_RowDeletingName="salesjournaltblRowDeleting" msprop:Generator_RowChangingName="salesjournaltblRowChanging" msprop:Generator_RowEvHandlerName="salesjournaltblRowChangeEventHandler" msprop:Generator_RowDeletedName="salesjournaltblRowDeleted" msprop:Generator_RowClassName="salesjournaltblRow" msprop:Generator_UserTableName="salesjournaltbl" msprop:Generator_RowEvArgName="salesjournaltblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="salesId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnsalesId" msprop:Generator_ColumnPropNameInRow="salesId" msprop:Generator_ColumnPropNameInTable="salesIdColumn" msprop:Generator_UserColumnName="salesId" type="xs:int" />
+              <xs:element name="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_UserColumnName="fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="Particulars" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debit" msprop:Generator_ColumnVarNameInTable="columnDebit" msprop:Generator_ColumnPropNameInRow="Debit" msprop:Generator_ColumnPropNameInTable="DebitColumn" msprop:Generator_UserColumnName="Debit" type="xs:decimal" />
+              <xs:element name="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" />
+              <xs:element name="AccountType" msprop:Generator_ColumnVarNameInTable="columnAccountType" msprop:Generator_ColumnPropNameInRow="AccountType" msprop:Generator_ColumnPropNameInTable="AccountTypeColumn" msprop:Generator_UserColumnName="AccountType">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:salesjournaltbl" />
+      <xs:field xpath="mstns:salesId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

@@ -1,0 +1,1524 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+AJEGLS
+</name>
+</assembly>
+<members>
+<member name="T:AJEGLS.journalsummarizeresult.journalsummarizeresultDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresult.journalsummarizeresultRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresult.journalsummarizeresultRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresult">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresultTableAdapters.journalsummarizeresultTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.journalsummarizeresult,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.journalsummarizeresult,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.journalsummarizeresult,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.journalsummarizeresult)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.journalsummarizeresultTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.retrieveCash.cashjournaltblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.retrieveCash.cashjournaltblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.retrieveCash.cashjournaltblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.retrieveCash">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.retrieveCashTableAdapters.cashjournaltblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.retrieveCash,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.retrieveCash,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.retrieveCash,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.retrieveCash)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.retrieveCashTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.retrieveCashTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.owners.ownersDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.owners.ownersRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.owners.ownersRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.owners">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.ownersTableAdapters.ownersTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.ownersTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.owners,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.ownersTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.owners,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.ownersTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.owners,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.ownersTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.ownersTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.owners)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.ownersTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.ownersTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.ownersTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieve.puchasejournaltblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieve.puchasejournaltblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieve.puchasejournaltblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieve">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieveTableAdapters.puchasejournaltblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.purchaseRetrieve,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.purchaseRetrieve,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.purchaseRetrieve,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.purchaseRetrieve)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.purchaseRetrieveTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.credit.debitchartDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.credit.debitchartRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.credit.debitchartRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.credit">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.creditTableAdapters.debitchartTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.creditTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.credit,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.creditTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.credit,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.creditTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.credit,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.creditTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.creditTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.credit)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.creditTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.creditTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.creditTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.LoadLiabities.loadliabilitiesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.LoadLiabities.loadliabilitiesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.LoadLiabities.loadliabilitiesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.LoadLiabities">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.LoadLiabitiesTableAdapters.loadliabilitiesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.LoadLiabities,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.LoadLiabities,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.LoadLiabities,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.LoadLiabities)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.LoadLiabitiesTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburse.disbursejournaltblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburse.disbursejournaltblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburse.disbursejournaltblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburse">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburseTableAdapters.disbursejournaltblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.retrieveDisburse,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.retrieveDisburse,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.retrieveDisburse,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.retrieveDisburse)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.retrieveDisburseTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.summarizejournal.summarizejournalDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.summarizejournal.summarizejournalRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.summarizejournal.summarizejournalRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.summarizejournal">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.summarizejournalTableAdapters.summarizejournalTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.summarizejournal,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.summarizejournal,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.summarizejournal,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.summarizejournal)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.summarizejournalTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.summarizejournalTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.customerList.customerlistDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.customerList.customerlistRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.customerList.customerlistRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.customerList">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.customerListTableAdapters.customerlistTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.customerListTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.customerList,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.customerListTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.customerList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.customerListTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.customerList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.customerListTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.customerListTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.customerList)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.customerListTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.customerListTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.customerListTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.retrievegeneral.generaltblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.retrievegeneral.generaltblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.retrievegeneral.generaltblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.retrievegeneral">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.retrievegeneralTableAdapters.generaltblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.retrievegeneral,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.retrievegeneral,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.retrievegeneral,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.retrievegeneral)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.retrievegeneralTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.accountlist.accountlistDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.accountlist.accountlistRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.accountlist.accountlistRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.accountlist">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.accountlistTableAdapters.accountlistTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.accountlistTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.accountlist,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.accountlistTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.accountlist,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.accountlistTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.accountlist,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.accountlistTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.accountlistTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.accountlist)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.accountlistTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.accountlistTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.accountlistTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.OwnersEquity.ownersequityDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.OwnersEquity.ownersequityRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.OwnersEquity.ownersequityRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.OwnersEquity">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.OwnersEquityTableAdapters.ownersequityTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.OwnersEquity,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.OwnersEquity,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.OwnersEquity,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.OwnersEquity)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.OwnersEquityTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMain.filtertrialbalanceDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMain.filtertrialbalanceRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMain.filtertrialbalanceRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMain">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMainTableAdapters.filtertrialbalanceTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.dsTrialBalanceMain,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.dsTrialBalanceMain,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.dsTrialBalanceMain,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.dsTrialBalanceMain)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.dsTrialBalanceMainTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpense.retrievexpenseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpense.retrievexpenseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpense.retrievexpenseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpense">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpenseTableAdapters.retrievexpenseTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.RetreiveExpense,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.RetreiveExpense,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.RetreiveExpense,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.RetreiveExpense)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.RetreiveExpenseTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilities.assetsandliabilitiesDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilities.assetsandliabilitiesRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilities.assetsandliabilitiesRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilities">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilitiesTableAdapters.assetsandliabilitiesTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.loadassetsandliabilities,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.loadassetsandliabilities,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.loadassetsandliabilities,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.loadassetsandliabilities)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.loadassetsandliabilitiesTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatement.filterIncomeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatement.filterIncomeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatement.filterIncomeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatement">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatementTableAdapters.filterIncomeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.dsIncomeStatement,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.dsIncomeStatement,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.dsIncomeStatement,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.dsIncomeStatement)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.dsIncomeStatementTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.chart.charttblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.chart.charttblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.chart.charttblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.chart">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.chartTableAdapters.charttblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.chartTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.chart,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.chartTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.chart,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.chartTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.chart,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.chartTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.chartTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.chart)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.chartTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.chartTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.chartTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.loadIncome.loadincomeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.loadIncome.loadincomeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.loadIncome.loadincomeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.loadIncome">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.loadIncomeTableAdapters.loadincomeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.loadIncome,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.loadIncome,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.loadIncome,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.loadIncome)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.loadIncomeTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.loadIncomeTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveData.salesjournaltblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveData.salesjournaltblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveData.salesjournaltblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveData">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveDataTableAdapters.salesjournaltblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.salesRetrieveData,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.salesRetrieveData,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.salesRetrieveData,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.salesRetrieveData)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.salesRetrieveDataTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarize.__finalresultofsummarizeDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarize.__finalresultofsummarizeRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarize.__finalresultofsummarizeRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarize">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarizeTableAdapters._finalresultofsummarizeTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.finalResultsummarize,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.finalResultsummarize,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.finalResultsummarize,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.finalResultsummarize)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.finalResultsummarizeTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatement.filterOwnersStatementDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatement.filterOwnersStatementRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatement.filterOwnersStatementRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatement">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatementTableAdapters.filterOwnersStatementTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.dsOwnersStatement,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.dsOwnersStatement,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.dsOwnersStatement,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.dsOwnersStatement)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.dsOwnersStatementTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.supplier.suppliertblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.supplier.suppliertblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.supplier.suppliertblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.supplier">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.supplierTableAdapters.suppliertblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.supplierTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.supplier,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.supplierTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.supplier,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.supplierTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.supplier,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.supplierTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.supplierTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.supplier)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.supplierTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.supplierTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.supplierTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSet.incomerevenueDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSet.incomerevenueRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSet.incomerevenueRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSet">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSetTableAdapters.incomerevenueTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.JournalEntryDataSet,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.JournalEntryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.JournalEntryDataSet,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.JournalEntryDataSet)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.JournalEntryDataSetTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.supplierList.supplierlistDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.supplierList.supplierlistRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.supplierList.supplierlistRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.supplierList">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.supplierListTableAdapters.supplierlistTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.supplierListTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.supplierList,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.supplierListTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.supplierList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.supplierListTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.supplierList,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.supplierListTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.supplierListTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.supplierList)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.supplierListTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.supplierListTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.supplierListTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.customerLname.customertblDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.customerLname.customertblRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.customerLname.customertblRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.customerLname">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.customerLnameTableAdapters.customertblTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.customerLnameTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.customerLname,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.customerLnameTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.customerLname,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.customerLnameTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.customerLname,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.customerLnameTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.customerLnameTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.customerLname)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.customerLnameTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.customerLnameTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.customerLnameTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatement.IncomeStatementDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatement.IncomeStatementRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatement.IncomeStatementRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatement">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatementTableAdapters.IncomeStatementTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.retrieveIncomeStatement,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.retrieveIncomeStatement,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.retrieveIncomeStatement,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.retrieveIncomeStatement)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.retrieveIncomeStatementTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.account">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.add">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.customer">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.Edit_No">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.Journal">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.noimage">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.Report">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.time">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.type">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.update">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="P:AJEGLS.My.Resources.Resources.users">
+	<summary>
+  Looks up a localized resource of type System.Drawing.Bitmap.
+</summary>
+</member><member name="T:AJEGLS.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="T:AJEGLS.filterAccount.filterAccountDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.filterAccount.filterAccountRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.filterAccount.filterAccountRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.filterAccount">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.filterAccountTableAdapters.filterAccountTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.filterAccountTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.filterAccount,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.filterAccountTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.filterAccount,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.filterAccountTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.filterAccount,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.filterAccountTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.filterAccountTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.filterAccount)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.filterAccountTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.filterAccountTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.filterAccountTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member><member name="T:AJEGLS.Expense.incomeexpenseDataTable">
+	<summary>
+Represents the strongly named DataTable class.
+</summary>
+</member><member name="T:AJEGLS.Expense.incomeexpenseRow">
+	<summary>
+Represents strongly named DataRow class.
+</summary>
+</member><member name="T:AJEGLS.Expense.incomeexpenseRowChangeEvent">
+	<summary>
+Row event argument class
+</summary>
+</member><member name="T:AJEGLS.Expense">
+	<summary>
+Represents a strongly typed in-memory cache of data.
+</summary>
+</member><member name="T:AJEGLS.ExpenseTableAdapters.incomeexpenseTableAdapter">
+	<summary>
+Represents the connection and commands used to retrieve and save data.
+</summary>
+</member><member name="M:AJEGLS.ExpenseTableAdapters.TableAdapterManager.UpdateUpdatedRows(AJEGLS.Expense,System.Collections.Generic.List{System.Data.DataRow},System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Update rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.ExpenseTableAdapters.TableAdapterManager.UpdateInsertedRows(AJEGLS.Expense,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Insert rows in top-down order.
+</summary>
+</member><member name="M:AJEGLS.ExpenseTableAdapters.TableAdapterManager.UpdateDeletedRows(AJEGLS.Expense,System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Delete rows in bottom-up order.
+</summary>
+</member><member name="M:AJEGLS.ExpenseTableAdapters.TableAdapterManager.GetRealUpdatedRows(System.Data.DataRow[],System.Collections.Generic.List{System.Data.DataRow})">
+	<summary>
+Remove inserted rows that become updated rows after calling TableAdapter.Update(inserted rows) first
+</summary>
+</member><member name="M:AJEGLS.ExpenseTableAdapters.TableAdapterManager.UpdateAll(AJEGLS.Expense)">
+	<summary>
+Update all changes to the dataset.
+</summary>
+</member><member name="T:AJEGLS.ExpenseTableAdapters.TableAdapterManager.UpdateOrderOption">
+	<summary>
+Update Order Option
+</summary>
+</member><member name="T:AJEGLS.ExpenseTableAdapters.TableAdapterManager.SelfReferenceComparer">
+	<summary>
+Used to sort self-referenced table's rows
+</summary>
+</member><member name="T:AJEGLS.ExpenseTableAdapters.TableAdapterManager">
+	<summary>
+TableAdapterManager is used to coordinate TableAdapters in the dataset to enable Hierarchical Update scenarios
+</summary>
+</member>
+</members>
+</doc>

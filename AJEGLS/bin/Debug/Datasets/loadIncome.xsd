@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="loadIncome" targetNamespace="http://tempuri.org/loadIncome.xsd" xmlns:mstns="http://tempuri.org/loadIncome.xsd" xmlns="http://tempuri.org/loadIncome.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="loadincomeTableAdapter" GeneratorDataComponentClassName="loadincomeTableAdapter" Name="loadincome" UserDataComponentName="loadincomeTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectName="JournalEntry.dbo.incometbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fillincome" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataincome" GeneratorSourceName="Fillincome" GetMethodModifier="Public" GetMethodName="GetDataincome" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataincome" UserSourceName="Fillincome">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        incomeid, revenue, expense, netincome,savedate
+FROM            dbo.incometbl</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="incomeid" DataSetColumn="incomeid" />
+              <Mapping SourceColumn="revenue" DataSetColumn="revenue" />
+              <Mapping SourceColumn="expense" DataSetColumn="expense" />
+              <Mapping SourceColumn="netincome" DataSetColumn="netincome" />
+              <Mapping SourceColumn="savedate" DataSetColumn="savedate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="loadIncome" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="loadIncome" msprop:Generator_UserDSName="loadIncome">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="loadincome" msprop:Generator_TableClassName="loadincomeDataTable" msprop:Generator_TableVarName="tableloadincome" msprop:Generator_RowChangedName="loadincomeRowChanged" msprop:Generator_TablePropName="_loadincome" msprop:Generator_RowDeletingName="loadincomeRowDeleting" msprop:Generator_RowChangingName="loadincomeRowChanging" msprop:Generator_RowEvHandlerName="loadincomeRowChangeEventHandler" msprop:Generator_RowDeletedName="loadincomeRowDeleted" msprop:Generator_RowClassName="loadincomeRow" msprop:Generator_UserTableName="loadincome" msprop:Generator_RowEvArgName="loadincomeRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="incomeid" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnincomeid" msprop:Generator_ColumnPropNameInRow="incomeid" msprop:Generator_ColumnPropNameInTable="incomeidColumn" msprop:Generator_UserColumnName="incomeid" type="xs:int" />
+              <xs:element name="revenue" msprop:Generator_ColumnVarNameInTable="columnrevenue" msprop:Generator_ColumnPropNameInRow="revenue" msprop:Generator_ColumnPropNameInTable="revenueColumn" msprop:Generator_UserColumnName="revenue" type="xs:decimal" />
+              <xs:element name="expense" msprop:Generator_ColumnVarNameInTable="columnexpense" msprop:Generator_ColumnPropNameInRow="expense" msprop:Generator_ColumnPropNameInTable="expenseColumn" msprop:Generator_UserColumnName="expense" type="xs:decimal" />
+              <xs:element name="netincome" msprop:Generator_ColumnVarNameInTable="columnnetincome" msprop:Generator_ColumnPropNameInRow="netincome" msprop:Generator_ColumnPropNameInTable="netincomeColumn" msprop:Generator_UserColumnName="netincome" type="xs:decimal" />
+              <xs:element name="savedate" msprop:Generator_ColumnVarNameInTable="columnsavedate" msprop:Generator_ColumnPropNameInRow="savedate" msprop:Generator_ColumnPropNameInTable="savedateColumn" msprop:Generator_UserColumnName="savedate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

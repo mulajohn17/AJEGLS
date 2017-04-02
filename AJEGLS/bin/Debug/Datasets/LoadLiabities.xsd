@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="LoadLiabities" targetNamespace="http://tempuri.org/LoadLiabities.xsd" xmlns:mstns="http://tempuri.org/LoadLiabities.xsd" xmlns="http://tempuri.org/LoadLiabities.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="loadliabilitiesTableAdapter" GeneratorDataComponentClassName="loadliabilitiesTableAdapter" Name="loadliabilities" UserDataComponentName="loadliabilitiesTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillLiabilities" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataLiabilities" GeneratorSourceName="FillLiabilities" GetMethodModifier="Public" GetMethodName="GetDataLiabilities" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataLiabilities" UserSourceName="FillLiabilities">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>	SELECT DATEPART(MONTH,dbo.specialjournaltbl.dateEntry)AS Month,DATEPART(YEAR,dbo.specialjournaltbl.dateEntry)AS YEAR, dbo.charttbl.chartname as Particulars, SUM(dbo.specialjournaltbl.credit -dbo.specialjournaltbl.debit) as Credit, dbo.charttypetbl.charttype
+FROM dbo.charttbl INNER JOIN
+dbo.charttypetbl ON dbo.charttbl.typeid = dbo.charttypetbl.typeid INNER JOIN
+dbo.specialjournaltbl ON dbo.charttbl.chartId = dbo.specialjournaltbl.chartId
+where dbo.charttypetbl.charttype = 'Liabilities'
+group by dbo.charttbl.chartname,datepart(MONTH,dbo.specialjournaltbl.dateEntry),DATEPART(YEAR,dbo.specialjournaltbl.dateEntry),dbo.charttypetbl.charttype
+
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Month" DataSetColumn="Month" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+              <Mapping SourceColumn="Particulars" DataSetColumn="Particulars" />
+              <Mapping SourceColumn="YEAR" DataSetColumn="YEAR" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="LoadLiabities" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="LoadLiabities" msprop:Generator_UserDSName="LoadLiabities">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="loadliabilities" msprop:Generator_TableClassName="loadliabilitiesDataTable" msprop:Generator_TableVarName="tableloadliabilities" msprop:Generator_RowChangedName="loadliabilitiesRowChanged" msprop:Generator_TablePropName="loadliabilities" msprop:Generator_RowDeletingName="loadliabilitiesRowDeleting" msprop:Generator_RowChangingName="loadliabilitiesRowChanging" msprop:Generator_RowEvHandlerName="loadliabilitiesRowChangeEventHandler" msprop:Generator_RowDeletedName="loadliabilitiesRowDeleted" msprop:Generator_RowClassName="loadliabilitiesRow" msprop:Generator_UserTableName="loadliabilities" msprop:Generator_RowEvArgName="loadliabilitiesRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Month" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:int" minOccurs="0" />
+              <xs:element name="Credit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Particulars" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YEAR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYEAR" msprop:Generator_ColumnPropNameInRow="YEAR" msprop:Generator_ColumnPropNameInTable="YEARColumn" msprop:Generator_UserColumnName="YEAR" type="xs:int" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

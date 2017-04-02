@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="OwnersEquity" targetNamespace="http://tempuri.org/OwnersEquity.xsd" xmlns:mstns="http://tempuri.org/OwnersEquity.xsd" xmlns="http://tempuri.org/OwnersEquity.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ownersequityTableAdapter" GeneratorDataComponentClassName="ownersequityTableAdapter" Name="ownersequity" UserDataComponentName="ownersequityTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectName="JournalEntry.dbo.ownerstbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="FillEndingCapital" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataEndingCapital" GeneratorSourceName="FillEndingCapital" GetMethodModifier="Public" GetMethodName="GetDataEndingCapital" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataEndingCapital" UserSourceName="FillEndingCapital">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT      ecapital as EndingCapital, savedate
+FROM            dbo.ownerstbl
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="EndingCapital" DataSetColumn="EndingCapital" />
+              <Mapping SourceColumn="savedate" DataSetColumn="savedate" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="OwnersEquity" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="OwnersEquity" msprop:Generator_UserDSName="OwnersEquity">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="ownersequity" msprop:Generator_TableClassName="ownersequityDataTable" msprop:Generator_TableVarName="tableownersequity" msprop:Generator_RowChangedName="ownersequityRowChanged" msprop:Generator_TablePropName="_ownersequity" msprop:Generator_RowDeletingName="ownersequityRowDeleting" msprop:Generator_RowChangingName="ownersequityRowChanging" msprop:Generator_RowEvHandlerName="ownersequityRowChangeEventHandler" msprop:Generator_RowDeletedName="ownersequityRowDeleted" msprop:Generator_RowClassName="ownersequityRow" msprop:Generator_UserTableName="ownersequity" msprop:Generator_RowEvArgName="ownersequityRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="EndingCapital" msprop:Generator_ColumnVarNameInTable="columnEndingCapital" msprop:Generator_ColumnPropNameInRow="EndingCapital" msprop:Generator_ColumnPropNameInTable="EndingCapitalColumn" msprop:Generator_UserColumnName="EndingCapital" type="xs:decimal" />
+              <xs:element name="savedate" msprop:Generator_ColumnVarNameInTable="columnsavedate" msprop:Generator_ColumnPropNameInRow="savedate" msprop:Generator_ColumnPropNameInTable="savedateColumn" msprop:Generator_UserColumnName="savedate" type="xs:dateTime" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

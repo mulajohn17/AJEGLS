@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="retrieveDisburse" targetNamespace="http://tempuri.org/retrieveDisburse.xsd" xmlns:mstns="http://tempuri.org/retrieveDisburse.xsd" xmlns="http://tempuri.org/retrieveDisburse.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="disbursejournaltblTableAdapter" GeneratorDataComponentClassName="disbursejournaltblTableAdapter" Name="disbursejournaltbl" UserDataComponentName="disbursejournaltblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FilldisburseJournal" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatadisburseJournal" GeneratorSourceName="FilldisburseJournal" GetMethodModifier="Public" GetMethodName="GetDatadisburseJournal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDatadisburseJournal" UserSourceName="FilldisburseJournal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        dbo.disbursejournaltbl.datee AS Date, dbo.charttbl.chartname AS Particulars, dbo.disbursejournaltbl.debit AS Debit, dbo.disbursejournaltbl.credit AS Credit, dbo.disbursejournaltbl.remarks, 
+                         dbo.customertbl.fullname, dbo.disbursejournaltbl.disburseId, dbo.charttbl.charttype
+FROM            dbo.disbursejournaltbl INNER JOIN
+                         dbo.customertbl ON dbo.disbursejournaltbl.customerId = dbo.customertbl.customerId INNER JOIN
+                         dbo.charttbl ON dbo.disbursejournaltbl.chartId = dbo.charttbl.chartId
+						 order by dbo.disbursejournaltbl.datee asc</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Date" DataSetColumn="Date" />
+              <Mapping SourceColumn="Particulars" DataSetColumn="Particulars" />
+              <Mapping SourceColumn="Debit" DataSetColumn="Debit" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="disburseId" DataSetColumn="disburseId" />
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="retrieveDisburse" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="retrieveDisburse" msprop:Generator_UserDSName="retrieveDisburse">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="disbursejournaltbl" msprop:Generator_TableClassName="disbursejournaltblDataTable" msprop:Generator_TableVarName="tabledisbursejournaltbl" msprop:Generator_TablePropName="disbursejournaltbl" msprop:Generator_RowDeletingName="disbursejournaltblRowDeleting" msprop:Generator_RowChangingName="disbursejournaltblRowChanging" msprop:Generator_RowEvHandlerName="disbursejournaltblRowChangeEventHandler" msprop:Generator_RowDeletedName="disbursejournaltblRowDeleted" msprop:Generator_UserTableName="disbursejournaltbl" msprop:Generator_RowChangedName="disbursejournaltblRowChanged" msprop:Generator_RowEvArgName="disbursejournaltblRowChangeEvent" msprop:Generator_RowClassName="disbursejournaltblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Date" msprop:Generator_ColumnVarNameInTable="columnDate" msprop:Generator_ColumnPropNameInRow="_Date" msprop:Generator_ColumnPropNameInTable="DateColumn" msprop:Generator_UserColumnName="Date" type="xs:dateTime" />
+              <xs:element name="Particulars" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debit" msprop:Generator_ColumnVarNameInTable="columnDebit" msprop:Generator_ColumnPropNameInRow="Debit" msprop:Generator_ColumnPropNameInTable="DebitColumn" msprop:Generator_UserColumnName="Debit" type="xs:decimal" />
+              <xs:element name="Credit" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" />
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_UserColumnName="fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="disburseId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columndisburseId" msprop:Generator_ColumnPropNameInRow="disburseId" msprop:Generator_ColumnPropNameInTable="disburseIdColumn" msprop:Generator_UserColumnName="disburseId" type="xs:int" />
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:disbursejournaltbl" />
+      <xs:field xpath="mstns:disburseId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

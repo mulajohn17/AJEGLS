@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="purchaseRetrieve" targetNamespace="http://tempuri.org/purchaseRetrieve.xsd" xmlns:mstns="http://tempuri.org/purchaseRetrieve.xsd" xmlns="http://tempuri.org/purchaseRetrieve.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="puchasejournaltblTableAdapter" GeneratorDataComponentClassName="puchasejournaltblTableAdapter" Name="puchasejournaltbl" UserDataComponentName="puchasejournaltblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillpurchaseJournal" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatapurchaseJournal" GeneratorSourceName="FillpurchaseJournal" GetMethodModifier="Public" GetMethodName="GetDatapurchaseJournal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDatapurchaseJournal" UserSourceName="FillpurchaseJournal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText> SELECT        dbo.puchasejournaltbl.datee, dbo.charttbl.chartname, dbo.puchasejournaltbl.debit, dbo.puchasejournaltbl.credit, dbo.puchasejournaltbl.remarks, dbo.suppliertbl.companyname, 
+                         dbo.puchasejournaltbl.purchaseId, dbo.charttbl.charttype 
+FROM            dbo.suppliertbl INNER JOIN
+                         dbo.puchasejournaltbl ON dbo.suppliertbl.supplierID = dbo.puchasejournaltbl.supplierID INNER JOIN
+                         dbo.charttbl ON dbo.puchasejournaltbl.chartId = dbo.charttbl.chartId
+ORDER BY dbo.puchasejournaltbl.datee</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="datee" DataSetColumn="datee" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+              <Mapping SourceColumn="debit" DataSetColumn="debit" />
+              <Mapping SourceColumn="chartname" DataSetColumn="chartname" />
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="companyname" DataSetColumn="companyname" />
+              <Mapping SourceColumn="purchaseId" DataSetColumn="purchaseId" />
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="purchaseRetrieve" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="purchaseRetrieve" msprop:Generator_UserDSName="purchaseRetrieve">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="puchasejournaltbl" msprop:Generator_TableClassName="puchasejournaltblDataTable" msprop:Generator_TableVarName="tablepuchasejournaltbl" msprop:Generator_TablePropName="puchasejournaltbl" msprop:Generator_RowDeletingName="puchasejournaltblRowDeleting" msprop:Generator_RowChangingName="puchasejournaltblRowChanging" msprop:Generator_RowEvHandlerName="puchasejournaltblRowChangeEventHandler" msprop:Generator_RowDeletedName="puchasejournaltblRowDeleted" msprop:Generator_UserTableName="puchasejournaltbl" msprop:Generator_RowChangedName="puchasejournaltblRowChanged" msprop:Generator_RowEvArgName="puchasejournaltblRowChangeEvent" msprop:Generator_RowClassName="puchasejournaltblRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="datee" msprop:Generator_ColumnVarNameInTable="columndatee" msprop:Generator_ColumnPropNameInRow="datee" msprop:Generator_ColumnPropNameInTable="dateeColumn" msprop:Generator_UserColumnName="datee" type="xs:dateTime" />
+              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:decimal" />
+              <xs:element name="debit" msprop:Generator_ColumnVarNameInTable="columndebit" msprop:Generator_ColumnPropNameInRow="debit" msprop:Generator_ColumnPropNameInTable="debitColumn" msprop:Generator_UserColumnName="debit" type="xs:decimal" />
+              <xs:element name="chartname" msprop:Generator_ColumnVarNameInTable="columnchartname" msprop:Generator_ColumnPropNameInRow="chartname" msprop:Generator_ColumnPropNameInTable="chartnameColumn" msprop:Generator_UserColumnName="chartname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="companyname" msprop:Generator_ColumnVarNameInTable="columncompanyname" msprop:Generator_ColumnPropNameInRow="companyname" msprop:Generator_ColumnPropNameInTable="companynameColumn" msprop:Generator_UserColumnName="companyname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="purchaseId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columnpurchaseId" msprop:Generator_ColumnPropNameInRow="purchaseId" msprop:Generator_ColumnPropNameInTable="purchaseIdColumn" msprop:Generator_UserColumnName="purchaseId" type="xs:int" />
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:puchasejournaltbl" />
+      <xs:field xpath="mstns:purchaseId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

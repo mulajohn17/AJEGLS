@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="filterAccount" targetNamespace="http://tempuri.org/filterAccount.xsd" xmlns:mstns="http://tempuri.org/filterAccount.xsd" xmlns="http://tempuri.org/filterAccount.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="filterAccountTableAdapter" GeneratorDataComponentClassName="filterAccountTableAdapter" Name="filterAccount" UserDataComponentName="filterAccountTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectName="JournalEntry.dbo.charttbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT charttype FROM dbo.charttbl</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="filterAccount" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="filterAccount" msprop:Generator_UserDSName="filterAccount">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="filterAccount" msprop:Generator_TableClassName="filterAccountDataTable" msprop:Generator_TableVarName="tablefilterAccount" msprop:Generator_TablePropName="_filterAccount" msprop:Generator_RowDeletingName="filterAccountRowDeleting" msprop:Generator_RowChangingName="filterAccountRowChanging" msprop:Generator_RowEvHandlerName="filterAccountRowChangeEventHandler" msprop:Generator_RowDeletedName="filterAccountRowDeleted" msprop:Generator_UserTableName="filterAccount" msprop:Generator_RowChangedName="filterAccountRowChanged" msprop:Generator_RowEvArgName="filterAccountRowChangeEvent" msprop:Generator_RowClassName="filterAccountRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

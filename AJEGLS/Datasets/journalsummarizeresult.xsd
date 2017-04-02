@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="journalsummarizeresult" targetNamespace="http://tempuri.org/journalsummarizeresult.xsd" xmlns:mstns="http://tempuri.org/journalsummarizeresult.xsd" xmlns="http://tempuri.org/journalsummarizeresult.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="journalsummarizeresultTableAdapter" GeneratorDataComponentClassName="journalsummarizeresultTableAdapter" Name="journalsummarizeresult" UserDataComponentName="journalsummarizeresultTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        dbo.summarizinggltbl.datee, dbo.charttbl.chartname, dbo.summarizinggltbl.debit, dbo.summarizinggltbl.credit
+FROM            dbo.summarizinggltbl INNER JOIN
+                         dbo.charttbl ON dbo.summarizinggltbl.chartId = dbo.charttbl.chartId</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="datee" DataSetColumn="datee" />
+              <Mapping SourceColumn="chartname" DataSetColumn="chartname" />
+              <Mapping SourceColumn="debit" DataSetColumn="debit" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="journalsummarizeresult" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="journalsummarizeresult" msprop:Generator_UserDSName="journalsummarizeresult">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="journalsummarizeresult" msprop:Generator_TableClassName="journalsummarizeresultDataTable" msprop:Generator_TableVarName="tablejournalsummarizeresult" msprop:Generator_TablePropName="_journalsummarizeresult" msprop:Generator_RowDeletingName="journalsummarizeresultRowDeleting" msprop:Generator_RowChangingName="journalsummarizeresultRowChanging" msprop:Generator_RowEvHandlerName="journalsummarizeresultRowChangeEventHandler" msprop:Generator_RowDeletedName="journalsummarizeresultRowDeleted" msprop:Generator_UserTableName="journalsummarizeresult" msprop:Generator_RowChangedName="journalsummarizeresultRowChanged" msprop:Generator_RowEvArgName="journalsummarizeresultRowChangeEvent" msprop:Generator_RowClassName="journalsummarizeresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="datee" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columndatee" msprop:Generator_ColumnPropNameInRow="datee" msprop:Generator_ColumnPropNameInTable="dateeColumn" msprop:Generator_UserColumnName="datee" type="xs:dateTime" />
+              <xs:element name="chartname" msprop:Generator_ColumnVarNameInTable="columnchartname" msprop:Generator_ColumnPropNameInRow="chartname" msprop:Generator_ColumnPropNameInTable="chartnameColumn" msprop:Generator_UserColumnName="chartname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="debit" msprop:Generator_ColumnVarNameInTable="columndebit" msprop:Generator_ColumnPropNameInRow="debit" msprop:Generator_ColumnPropNameInTable="debitColumn" msprop:Generator_UserColumnName="debit" type="xs:decimal" />
+              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:decimal" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

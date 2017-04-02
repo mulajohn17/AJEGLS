@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="retrieveCash" targetNamespace="http://tempuri.org/retrieveCash.xsd" xmlns:mstns="http://tempuri.org/retrieveCash.xsd" xmlns="http://tempuri.org/retrieveCash.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="cashjournaltblTableAdapter" GeneratorDataComponentClassName="cashjournaltblTableAdapter" Name="cashjournaltbl" UserDataComponentName="cashjournaltblTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillcashJournal" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDatacashJournal" GeneratorSourceName="FillcashJournal" GetMethodModifier="Public" GetMethodName="GetDatacashJournal" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDatacashJournal" UserSourceName="FillcashJournal">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        dbo.cashjournaltbl.datee, dbo.charttbl.chartname, dbo.cashjournaltbl.debit, dbo.cashjournaltbl.credit, dbo.cashjournaltbl.remarks, dbo.customertbl.fullname, 
+                         dbo.cashjournaltbl.cashId, dbo.charttbl.charttype
+FROM            dbo.cashjournaltbl INNER JOIN
+                         dbo.customertbl ON dbo.cashjournaltbl.customerId = dbo.customertbl.customerId INNER JOIN
+                         dbo.charttbl ON dbo.cashjournaltbl.chartId = dbo.charttbl.chartId
+						 order by dbo.cashjournaltbl.datee
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="debit" DataSetColumn="debit" />
+              <Mapping SourceColumn="credit" DataSetColumn="credit" />
+              <Mapping SourceColumn="datee" DataSetColumn="datee" />
+              <Mapping SourceColumn="chartname" DataSetColumn="chartname" />
+              <Mapping SourceColumn="remarks" DataSetColumn="remarks" />
+              <Mapping SourceColumn="cashId" DataSetColumn="cashId" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="retrieveCash" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="retrieveCash" msprop:Generator_UserDSName="retrieveCash">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="cashjournaltbl" msprop:Generator_TableClassName="cashjournaltblDataTable" msprop:Generator_TableVarName="tablecashjournaltbl" msprop:Generator_RowChangedName="cashjournaltblRowChanged" msprop:Generator_TablePropName="cashjournaltbl" msprop:Generator_RowDeletingName="cashjournaltblRowDeleting" msprop:Generator_RowChangingName="cashjournaltblRowChanging" msprop:Generator_RowEvHandlerName="cashjournaltblRowChangeEventHandler" msprop:Generator_RowDeletedName="cashjournaltblRowDeleted" msprop:Generator_RowClassName="cashjournaltblRow" msprop:Generator_UserTableName="cashjournaltbl" msprop:Generator_RowEvArgName="cashjournaltblRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="debit" msprop:Generator_ColumnVarNameInTable="columndebit" msprop:Generator_ColumnPropNameInRow="debit" msprop:Generator_ColumnPropNameInTable="debitColumn" msprop:Generator_UserColumnName="debit" type="xs:decimal" />
+              <xs:element name="credit" msprop:Generator_ColumnVarNameInTable="columncredit" msprop:Generator_ColumnPropNameInRow="credit" msprop:Generator_ColumnPropNameInTable="creditColumn" msprop:Generator_UserColumnName="credit" type="xs:decimal" />
+              <xs:element name="datee" msprop:Generator_ColumnVarNameInTable="columndatee" msprop:Generator_ColumnPropNameInRow="datee" msprop:Generator_ColumnPropNameInTable="dateeColumn" msprop:Generator_UserColumnName="datee" type="xs:dateTime" />
+              <xs:element name="chartname" msprop:Generator_ColumnVarNameInTable="columnchartname" msprop:Generator_ColumnPropNameInRow="chartname" msprop:Generator_ColumnPropNameInTable="chartnameColumn" msprop:Generator_UserColumnName="chartname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="remarks" msprop:Generator_ColumnVarNameInTable="columnremarks" msprop:Generator_ColumnPropNameInRow="remarks" msprop:Generator_ColumnPropNameInTable="remarksColumn" msprop:Generator_UserColumnName="remarks">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="2147483647" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="cashId" msdata:ReadOnly="true" msdata:AutoIncrement="true" msdata:AutoIncrementSeed="-1" msdata:AutoIncrementStep="-1" msprop:Generator_ColumnVarNameInTable="columncashId" msprop:Generator_ColumnPropNameInRow="cashId" msprop:Generator_ColumnPropNameInTable="cashIdColumn" msprop:Generator_UserColumnName="cashId" type="xs:int" />
+              <xs:element name="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_UserColumnName="fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:cashjournaltbl" />
+      <xs:field xpath="mstns:cashId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>

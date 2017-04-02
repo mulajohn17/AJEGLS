@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="RetreiveExpense" targetNamespace="http://tempuri.org/RetreiveExpense.xsd" xmlns:mstns="http://tempuri.org/RetreiveExpense.xsd" xmlns="http://tempuri.org/RetreiveExpense.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="retrievexpenseTableAdapter" GeneratorDataComponentClassName="retrievexpenseTableAdapter" Name="retrievexpense" UserDataComponentName="retrievexpenseTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillExpense" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="FillExpense" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="FillExpense">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT DATEPART(MONTH,dbo.specialjournaltbl.dateEntry)AS Month,DATEPART(YEAR,dbo.specialjournaltbl.dateEntry)AS YEAR, dbo.charttbl.chartname, SUM(dbo.specialjournaltbl.debit -dbo.specialjournaltbl.credit) as Debit, dbo.charttypetbl.charttype
+FROM dbo.charttbl INNER JOIN
+dbo.charttypetbl ON dbo.charttbl.typeid = dbo.charttypetbl.typeid INNER JOIN
+dbo.specialjournaltbl ON dbo.charttbl.chartId = dbo.specialjournaltbl.chartId
+where dbo.charttypetbl.charttype = 'Expense'
+group by dbo.charttbl.chartname,datepart(MONTH,dbo.specialjournaltbl.dateEntry),DATEPART(YEAR,dbo.specialjournaltbl.dateEntry),dbo.charttypetbl.charttype
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Debit" DataSetColumn="Debit" />
+              <Mapping SourceColumn="Month" DataSetColumn="Month" />
+              <Mapping SourceColumn="charttype" DataSetColumn="charttype" />
+              <Mapping SourceColumn="YEAR" DataSetColumn="YEAR" />
+              <Mapping SourceColumn="chartname" DataSetColumn="chartname" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="RetreiveExpense" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="RetreiveExpense" msprop:Generator_UserDSName="RetreiveExpense">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="retrievexpense" msprop:Generator_TableClassName="retrievexpenseDataTable" msprop:Generator_TableVarName="tableretrievexpense" msprop:Generator_TablePropName="retrievexpense" msprop:Generator_RowDeletingName="retrievexpenseRowDeleting" msprop:Generator_RowChangingName="retrievexpenseRowChanging" msprop:Generator_RowEvHandlerName="retrievexpenseRowChangeEventHandler" msprop:Generator_RowDeletedName="retrievexpenseRowDeleted" msprop:Generator_UserTableName="retrievexpense" msprop:Generator_RowChangedName="retrievexpenseRowChanged" msprop:Generator_RowEvArgName="retrievexpenseRowChangeEvent" msprop:Generator_RowClassName="retrievexpenseRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Debit" msprop:Generator_ColumnVarNameInTable="columnDebit" msprop:Generator_ColumnPropNameInRow="Debit" msprop:Generator_ColumnPropNameInTable="DebitColumn" msprop:Generator_UserColumnName="Debit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Month" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnMonth" msprop:Generator_ColumnPropNameInRow="Month" msprop:Generator_ColumnPropNameInTable="MonthColumn" msprop:Generator_UserColumnName="Month" type="xs:int" minOccurs="0" />
+              <xs:element name="charttype" msprop:Generator_ColumnVarNameInTable="columncharttype" msprop:Generator_ColumnPropNameInRow="charttype" msprop:Generator_ColumnPropNameInTable="charttypeColumn" msprop:Generator_UserColumnName="charttype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="YEAR" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnYEAR" msprop:Generator_ColumnPropNameInRow="YEAR" msprop:Generator_ColumnPropNameInTable="YEARColumn" msprop:Generator_UserColumnName="YEAR" type="xs:int" minOccurs="0" />
+              <xs:element name="chartname" msprop:Generator_ColumnVarNameInTable="columnchartname" msprop:Generator_ColumnPropNameInRow="chartname" msprop:Generator_ColumnPropNameInTable="chartnameColumn" msprop:Generator_UserColumnName="chartname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

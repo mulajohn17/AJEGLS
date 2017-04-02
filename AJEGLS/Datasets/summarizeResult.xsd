@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="summarizeResult" targetNamespace="http://tempuri.org/summarizeResult.xsd" xmlns:mstns="http://tempuri.org/summarizeResult.xsd" xmlns="http://tempuri.org/summarizeResult.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="summarizeresultTableAdapter" GeneratorDataComponentClassName="summarizeresultTableAdapter" Name="summarizeresult" UserDataComponentName="summarizeresultTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectName="JournalEntry.dbo.salesjournaltbl" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>
+select chartId as Particulars,SUm(debit) as Debit,SUM(credit) as Credit,(SUm(debit)-SUM(credit)) as Balance from salesjournaltbl
+group by chartId
+union all
+
+select chartId as Particulars,SUm(debit) as Debit,SUM(credit) as Credit,(SUm(debit)-SUM(credit)) as Balance from puchasejournaltbl
+group by chartId
+union all
+
+
+select chartId as Particulars,SUm(debit) as Debit,SUM(credit) as Credit,(SUm(debit)-SUM(credit)) as Balance from cashjournaltbl
+group by chartId
+union all
+
+select chartId as Particulars,SUm(debit) as Debit,SUM(credit) as Credit,(SUm(debit)-SUM(credit)) as Balance from disbursejournaltbl
+group by chartId
+union all
+
+select chartId as Particulars,SUm(debit) as Debit,SUM(credit) as Credit,(SUm(debit)-SUM(credit)) as Balance from generaltbl
+group by chartId
+</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="Particulars" DataSetColumn="Particulars" />
+              <Mapping SourceColumn="Debit" DataSetColumn="Debit" />
+              <Mapping SourceColumn="Credit" DataSetColumn="Credit" />
+              <Mapping SourceColumn="Balance" DataSetColumn="Balance" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="summarizeResult" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="summarizeResult" msprop:Generator_UserDSName="summarizeResult">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="summarizeresult" msprop:Generator_TableClassName="summarizeresultDataTable" msprop:Generator_TableVarName="tablesummarizeresult" msprop:Generator_TablePropName="_summarizeresult" msprop:Generator_RowDeletingName="summarizeresultRowDeleting" msprop:Generator_RowChangingName="summarizeresultRowChanging" msprop:Generator_RowEvHandlerName="summarizeresultRowChangeEventHandler" msprop:Generator_RowDeletedName="summarizeresultRowDeleted" msprop:Generator_UserTableName="summarizeresult" msprop:Generator_RowChangedName="summarizeresultRowChanged" msprop:Generator_RowEvArgName="summarizeresultRowChangeEvent" msprop:Generator_RowClassName="summarizeresultRow">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="Particulars" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnParticulars" msprop:Generator_ColumnPropNameInRow="Particulars" msprop:Generator_ColumnPropNameInTable="ParticularsColumn" msprop:Generator_UserColumnName="Particulars" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Debit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnDebit" msprop:Generator_ColumnPropNameInRow="Debit" msprop:Generator_ColumnPropNameInTable="DebitColumn" msprop:Generator_UserColumnName="Debit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Credit" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnCredit" msprop:Generator_ColumnPropNameInRow="Credit" msprop:Generator_ColumnPropNameInTable="CreditColumn" msprop:Generator_UserColumnName="Credit" type="xs:decimal" minOccurs="0" />
+              <xs:element name="Balance" msdata:ReadOnly="true" msprop:Generator_ColumnVarNameInTable="columnBalance" msprop:Generator_ColumnPropNameInRow="Balance" msprop:Generator_ColumnPropNameInTable="BalanceColumn" msprop:Generator_UserColumnName="Balance" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

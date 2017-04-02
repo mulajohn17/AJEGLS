@@ -1,0 +1,130 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="customerList" targetNamespace="http://tempuri.org/customerList.xsd" xmlns:mstns="http://tempuri.org/customerList.xsd" xmlns="http://tempuri.org/customerList.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="MySettings" AppSettingsPropertyName="JournalEntryConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="JournalEntryConnectionString (MySettings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.AJEGLS.My.MySettings.GlobalReference.Default.JournalEntryConnectionString" Provider="System.Data.SqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="customerlistTableAdapter" GeneratorDataComponentClassName="customerlistTableAdapter" Name="customerlist" UserDataComponentName="customerlistTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="JournalEntryConnectionString (MySettings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="FillCustomer" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetDataCustomer" GeneratorSourceName="FillCustomer" GetMethodModifier="Public" GetMethodName="GetDataCustomer" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="false" UserGetMethodName="GetDataCustomer" UserSourceName="FillCustomer">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT        customertbl.customerId, customertbl.fname, customertbl.mname, customertbl.lname, customertbl.fullname, customertbl.contact, customertbl.houseNo, customertbl.Barangay, customertbl.municipality, customertbl.pictures, customertypetbl.customertype
+FROM            customertbl INNER JOIN
+                         customertypetbl ON customertbl.customertypeid = customertypetbl.customertypeid
+ORDER BY customertbl.lname</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="fname" DataSetColumn="fname" />
+              <Mapping SourceColumn="mname" DataSetColumn="mname" />
+              <Mapping SourceColumn="lname" DataSetColumn="lname" />
+              <Mapping SourceColumn="fullname" DataSetColumn="fullname" />
+              <Mapping SourceColumn="contact" DataSetColumn="contact" />
+              <Mapping SourceColumn="houseNo" DataSetColumn="houseNo" />
+              <Mapping SourceColumn="Barangay" DataSetColumn="Barangay" />
+              <Mapping SourceColumn="municipality" DataSetColumn="municipality" />
+              <Mapping SourceColumn="customertype" DataSetColumn="customertype" />
+              <Mapping SourceColumn="pictures" DataSetColumn="pictures" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="customerList" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="true" msprop:Generator_DataSetName="customerList" msprop:Generator_UserDSName="customerList">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="customerlist" msprop:Generator_TableClassName="customerlistDataTable" msprop:Generator_TableVarName="tablecustomerlist" msprop:Generator_RowChangedName="customerlistRowChanged" msprop:Generator_TablePropName="_customerlist" msprop:Generator_RowDeletingName="customerlistRowDeleting" msprop:Generator_RowChangingName="customerlistRowChanging" msprop:Generator_RowEvHandlerName="customerlistRowChangeEventHandler" msprop:Generator_RowDeletedName="customerlistRowDeleted" msprop:Generator_RowClassName="customerlistRow" msprop:Generator_UserTableName="customerlist" msprop:Generator_RowEvArgName="customerlistRowChangeEvent">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="customerId" msprop:Generator_ColumnVarNameInTable="columncustomerId" msprop:Generator_ColumnPropNameInRow="customerId" msprop:Generator_ColumnPropNameInTable="customerIdColumn" msprop:Generator_UserColumnName="customerId">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fname" msprop:Generator_ColumnVarNameInTable="columnfname" msprop:Generator_ColumnPropNameInRow="fname" msprop:Generator_ColumnPropNameInTable="fnameColumn" msprop:Generator_UserColumnName="fname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="mname" msprop:Generator_ColumnVarNameInTable="columnmname" msprop:Generator_ColumnPropNameInRow="mname" msprop:Generator_ColumnPropNameInTable="mnameColumn" msprop:Generator_UserColumnName="mname" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="lname" msprop:Generator_ColumnVarNameInTable="columnlname" msprop:Generator_ColumnPropNameInRow="lname" msprop:Generator_ColumnPropNameInTable="lnameColumn" msprop:Generator_UserColumnName="lname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="fullname" msprop:Generator_ColumnVarNameInTable="columnfullname" msprop:Generator_ColumnPropNameInRow="fullname" msprop:Generator_ColumnPropNameInTable="fullnameColumn" msprop:Generator_UserColumnName="fullname">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="100" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="contact" msprop:Generator_ColumnVarNameInTable="columncontact" msprop:Generator_ColumnPropNameInRow="contact" msprop:Generator_ColumnPropNameInTable="contactColumn" msprop:Generator_UserColumnName="contact" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="houseNo" msprop:Generator_ColumnVarNameInTable="columnhouseNo" msprop:Generator_ColumnPropNameInRow="houseNo" msprop:Generator_ColumnPropNameInTable="houseNoColumn" msprop:Generator_UserColumnName="houseNo" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="Barangay" msprop:Generator_ColumnVarNameInTable="columnBarangay" msprop:Generator_ColumnPropNameInRow="Barangay" msprop:Generator_ColumnPropNameInTable="BarangayColumn" msprop:Generator_UserColumnName="Barangay">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="municipality" msprop:Generator_ColumnVarNameInTable="columnmunicipality" msprop:Generator_ColumnPropNameInRow="municipality" msprop:Generator_ColumnPropNameInTable="municipalityColumn" msprop:Generator_UserColumnName="municipality">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="customertype" msprop:Generator_ColumnVarNameInTable="columncustomertype" msprop:Generator_ColumnPropNameInRow="customertype" msprop:Generator_ColumnPropNameInTable="customertypeColumn" msprop:Generator_UserColumnName="customertype">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="50" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="pictures" msprop:Generator_ColumnVarNameInTable="columnpictures" msprop:Generator_ColumnPropNameInRow="pictures" msprop:Generator_ColumnPropNameInTable="picturesColumn" msprop:Generator_UserColumnName="pictures" type="xs:base64Binary" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+    <xs:unique name="Constraint1" msdata:PrimaryKey="true">
+      <xs:selector xpath=".//mstns:customerlist" />
+      <xs:field xpath="mstns:customerId" />
+    </xs:unique>
+  </xs:element>
+</xs:schema>
